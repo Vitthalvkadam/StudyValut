@@ -18,7 +18,8 @@ spring:
       max-file-size: ${MAX_FILE_MB:25}MB
       max-request-size: ${MAX_FILE_MB:25}MB
 server:
-  port: 8080
+  port: ${PORT:8080}
+  forward-headers-strategy: framework
   error:
     include-message: never
     include-stacktrace: never
